@@ -1,0 +1,356 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--cor-menu);
+    color: white;
+}
+
+/* Variáveis de cor */
+:root {
+    --cor-menu: rgb(37, 37, 37);
+    --cor-principal: black;
+    --cor-texto: rgb(238, 238, 238);
+}
+
+/* Estilos globais */
+
+header{
+    margin-top: -200px;
+    padding: 10px;
+    background-color: var(--cor-menu);
+    font-weight: 100;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    word-spacing: -5px;
+    color: white;
+}
+
+.nav-list{
+    margin-left: 40%;
+}
+
+.logo{
+    display: inline;
+    margin-left: 80px;
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.nav-itens{
+    display: inline;
+    margin-right: 70px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    color: white;
+}
+
+/* Seção do calendário */
+.calendar-section {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--cor-menu);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.calendar-header {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: white;}
+
+.day {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calendar-days-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.day-number {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.day-number:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* Estilo para a navegação */
+.nav-itens a:hover {
+    opacity: 60%;
+}
+
+@media (max-width: 768px) {
+    /* Ajuste do header */
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    /* Ocultar a lista de navegação e exibir o botão de menu */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -40px;
+        background-color: var(--cor-menu);
+        height: 20vh;
+        width: 100vh;
+        text-align: end;
+    }
+
+    /* Menu toggle visível em telas pequenas */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: -20px;
+        right: 20px;
+    }
+
+    /* Exibir menu quando ativado */
+    .nav-list.active {
+        display: flex;
+        transition: 1s;
+    }
+
+    /* Ajuste das caixas para empilharem */
+    .box {
+        width: 90%;
+        margin: 15px auto;
+        font-size: 1rem;
+    }
+
+    /* Ajuste de tamanhos de fonte */
+    .h1-inicio {
+        font-size: 1.8rem;
+        margin-top: 50px;
+    }
+
+    .p-inicio, .h1-box {
+        font-size: 1rem;
+    }
+
+    /* Ajuste do botão */
+    button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+
+    .inicio1{
+        height: 60vh;
+        margin: 0;
+        margin-bottom: -50px;
+    }
+
+    .inicio2{
+        margin: -10px;
+        height: 65vh;
+        padding: auto;
+    }
+
+    .box{
+        position: relative;
+        top: 40px;
+        margin-top: 30px;
+    }
+
+    .day {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .calendar-days-content {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    .calendar-header{
+        margin-top:20vh;
+    }
+
+    .calendar-section {
+        align-items: center;
+        margin-top: auto;
+        justify-content: center;
+
+    }
+
+    .day-number {
+        margin-top: 0px;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    header{
+        margin-top: auto;
+    }
+}
+
+/* Estilos para telas maiores que 768px */
+@media (min-width: 769px) {
+    /* Restaurar estilo padrão para navegação */
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    /* Layout das caixas lado a lado */
+    .box {
+        display: inline-block;
+        width: 28%;
+        vertical-align: top;
+    }
+
+
+}
+
+/* Estilos para telas médias (tablets, entre 769px e 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+    .inicio1{
+        height: 60vh;
+        margin: 0;
+        margin-bottom: -50px;
+    }
+
+    .inicio2{
+        margin: -10px;
+        height: 65vh;
+        padding: auto;
+    }
+
+
+    .h1-inicio {
+        font-size: 2.2rem;
+        margin-top: 60px;
+    }
+
+    .p-inicio {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .box-inicio {
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    .box {
+        width: 45%;
+        margin: 15px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Estilos para telas extra grandes (monitores acima de 1440px) */
+@media (min-width: 1441px) {
+
+    .h1-inicio {
+        font-size: 3rem;
+        margin-top: 100px;
+    }
+
+    .p-inicio {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .box-inicio {
+        padding: 60px;
+        max-width: 1200px;
+    }
+
+    .box {
+        width: 28%;
+        margin: 20px;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+        padding: 15px 35px;
+    }
+}
