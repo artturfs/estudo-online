@@ -1,0 +1,525 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+:root {
+    --cor-menu: rgb(37, 37, 37) ;
+    --cor-principal:rgb(238, 238, 238);
+    --cor-texto: white;
+}
+
+span{
+    color: var(--cor-texto);
+}
+
+header{
+    top: 0;
+    padding: 10px;
+    background-color: var(--cor-menu);
+    font-weight: 100;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    word-spacing: -5px;
+}
+
+.nav-list{
+    margin-left: 40%;
+}
+
+.logo{
+    display: inline;
+    margin-left: 80px;
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--cor-principal);
+}
+
+.nav-itens{
+    display: inline;
+    margin-right: 80px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+a{
+    color: var(--cor-principal);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.inicio1{
+    background-color: var(--cor-menu);
+    width: 100%;
+    height: 100vh;
+}
+
+.entrar{
+    border: 1px solid var(--cor-texto);
+    padding: 10px;
+    color: var(--cor-texto);
+}
+
+.entrar:hover{
+    opacity: 50%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    color: var(--cor-principal);
+}
+
+.footer-bottom{
+    background-color: var(--cor-menu);
+    padding: 15px;
+    color: var(--cor-texto);
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1441px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        margin: auto;
+        display: flex;
+    }
+
+    .logo{
+        font-size: 4vb;
+        margin: auto;
+    }
+
+
+    .nav-itens{
+        margin: 15px 20px;
+    }
+
+    li{
+        margin-left: auto;
+    }
+
+    .inicio1{
+        height: auto;
+        margin: 0;
+        margin-bottom: -50px;
+    }
+
+    .inicio2{
+        margin: 0 auto;
+        height: auto;
+        padding: auto;
+    }
+
+
+    .h1-inicio {
+        font-size: 2.2rem;
+        margin-top: 60px;
+    }
+
+    .p-inicio {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .box-inicio {
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    .box {
+        width: 28%;
+        margin: 25px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1441px) {
+
+    .h1-inicio {
+        font-size: 3rem;
+        margin-top: 100px;
+    }
+
+    .p-inicio {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .box-inicio {
+        padding: 60px;
+        max-width: 1200px;
+    }
+
+    .box {
+        width: 28%;
+        margin: 30px 20px;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+        padding: 15px 35px;
+    }
+    
+    .nav-list{
+        margin: auto 0 auto auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    #update-calendar {
+        margin-top: 30px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -40px;
+        background-color: var(--cor-menu);
+        height: auto;
+        width: 140%;
+        text-align: end;
+        padding-bottom: 20px;
+        box-shadow: 0 40px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: -30px;
+        right: 20px;
+    }
+
+    .nav-list.active {
+        display: flex;
+        transition: 1s;
+    }
+
+    .nav-itens{
+        margin-top: 20px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+
+    .calendar-header {
+        font-size: 1.2rem;
+    }
+
+    #agenda-dia {
+        padding: 15px;
+    }
+
+    .agenda-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .calendar-days {
+        gap: 5px;
+        font-size: .9rem;
+        margin: 0 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .calendar-days-content {
+        gap: 2px; /* Reduz o espaçamento em dispositivos menores */
+    }
+
+    .day-number {
+        font-size: 1rem; /* Tamanho reduzido */
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .day-number {
+        font-size: 0.8rem; /* Mais compacto para telas pequenas */
+        padding: 5px;    }
+
+    .calendar-days {
+        gap: 5px;
+        margin: 0 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* Estilos globais */
+span {
+    color: #f0f0f0;
+}
+
+/* Seção do calendário */
+.calendar-container {
+    margin-top: 100px;
+    width: 100%;
+    max-width: 900px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-header {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#month-select,
+#year-input {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #444;
+    border: 1px solid #888;
+    color: #f0f0f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#month-select:focus,
+#year-input:focus {
+    outline: none;
+    border-color: #f0f0f0;
+    background-color: #555;
+}
+
+#update-calendar {
+    padding: 8px 16px;
+    background-color: #444;
+    border: 1px solid #888;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#update-calendar:hover {
+    background-color: #666;
+}
+
+/* Estilos para os dias do calendário */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.day {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calendar-days-content {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 5px; /* Ajuste menor para espaçamento em telas menores */
+    font-size: 3vw; /* Tamanho de fonte adaptável */
+}
+
+.day-number {
+    font-size: 1.5rem; /* Responsivo em relação ao `font-size` de `.calendar-days-content` */
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.day-number:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para o modal de tarefas */
+#day-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#day-modal-content {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#day-modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#task-input {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #888;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #f0f0f0;
+}
+
+#save-task {
+    width: 100%;
+    padding: 12px;
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#save-task:hover {
+    background-color: #666;
+}
+
+#close-modal {
+    width: 100%;
+    padding: 10px;
+    background-color: #888;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#close-modal:hover {
+    background-color: #aaa;
+}
+
+/* Estilos para a agenda do dia */
+#agenda-dia {
+    background-color: #333;
+    color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#agenda-dia h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+#agenda-dia #dia-selecionado {
+    font-weight: bold;
+}
+
+.agenda-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-form textarea {
+    padding: 15px;
+    background-color: #444;
+    color: #f0f0f0;
+    border: 1px solid #888;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.agenda-form button {
+    padding: 12px;
+    background-color: #444;
+    border: none;
+    color: #f0f0f0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.agenda-form button:hover {
+    background-color: #666;
+}

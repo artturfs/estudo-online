@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo On-line</title>
+    <link rel="stylesheet" href="agenda.css">
+    <link rel="shortcut icon" href="estudo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <li class="logo">Estudo <span>On</span>-line</li>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="agenda.html">AGENDA</a></li>
+            <li class="nav-itens"><a href="atividades.html">ATIVIDADES</a></li>
+            <li class="nav-itens"><a href="material.html">MATERIAL</a></li>
+            <li class="nav-itens"><a href="cadastro.html" class="entrar">Registre-se</a></li>
+        </ul>
+    </header>
+    <center>
+        <section class="calendar-section">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <span class="month-name">Novembro 2024</span>
+                    <select id="month-select">
+                        <option value="0">Janeiro</option>
+                        <option value="1">Fevereiro</option>
+                        <option value="2">Março</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Maio</option>
+                        <option value="5">Junho</option>
+                        <option value="6">Julho</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Setembro</option>
+                        <option value="9">Outubro</option>
+                        <option value="10">Novembro</option>
+                        <option value="11">Dezembro</option>
+                    </select>
+                    <input type="number" id="year-input" value="2024" min="1900" max="2100" />
+                </div>  
+                <div class="calendar">
+                    <div class="calendar-days">
+                        <div class="day">Dom</div>
+                        <div class="day">Seg</div>
+                        <div class="day">Ter</div>
+                        <div class="day">Qua</div>
+                        <div class="day">Qui</div>
+                        <div class="day">Sex</div>
+                        <div class="day">Sáb</div>
+                    </div>
+                    <div class="calendar-days-content">
+                        <!-- Dias serão gerados dinamicamente pelo JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="agenda-dia" class="tab-content">
+            <h3>Agenda do dia <span id="dia-selecionado"></span></h3>
+            <form class="agenda-form">
+                <textarea id="agenda-textarea" placeholder="Digite os afazeres..." rows="5"></textarea>
+                <button type="submit">Salvar Agenda</button>
+            </form>
+        </div>    
+    </center>
+    
+    <script src="agenda.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Estudo On-line. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

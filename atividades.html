@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="atividades.css">
+</head>
+<body>
+    <header>
+        <li class="logo">Estudo <span>On</span>-line</li>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="agenda.html">AGENDA</a></li>
+            <li class="nav-itens"><a href="atividades.html">ATIVIDADES</a></li>
+            <li class="nav-itens"><a href="material.html">MATERIAL</a></li>
+            <li class="nav-itens"><a href="cadastro.html" class="entrar">Registre-se</a></li>
+        </ul>
+    </header>
+
+    <article>
+        <section class="atividades-section">
+            <h2>Atividades</h2>
+            <form id="add-materia-form">
+                <input type="text" id="materia-input" placeholder="Adicionar matéria" required />
+                <button type="submit">Adicionar Matéria</button>
+            </form>
+            <div class="materias-container" id="materias-container">
+                <!-- Blocos de matérias e anotações serão adicionados dinamicamente -->
+            </div>
+        </section>
+    </article>
+
+    <script src="atividades.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

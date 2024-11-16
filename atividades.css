@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    position: absolute;
+    top: 160px;
+    left: 1100px;
+    width: 490px;
+}
+
+span {
+    color: var(--cor-texto);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    color: var(--cor-principal);
+}
+
+header {
+    top: 0;
+    padding: 10px;
+    background-color: var(--cor-menu);
+    font-weight: 100;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    word-spacing: -5px;
+    z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+}
+
+.nav-list {
+    margin-left: 40%;
+}
+
+.logo {
+    display: inline;
+    margin-left: 80px;
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--cor-principal);
+}
+
+.nav-itens {
+    display: inline;
+    margin-right: 80px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+a {
+    color: var(--cor-principal);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+
+/* Configurações gerais */
+:root {
+    --cor-menu: rgb(0, 54, 146);
+    --cor-principal: rgb(238, 238, 238);
+    --cor-texto: rgba(255, 255, 255, 0.453);
+    --cor-bloco-materia: rgb(0, 54, 146);
+    --cor-fundo: #0000001f;
+    --cor-borda: rgb(0, 54, 146);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column; /* Define a orientação do layout */
+    
+}
+
+article{
+    height: 100vh;
+}
+
+/* Adiciona um espaçamento superior para que o conteúdo fique abaixo do menu fixo */
+.atividades-section {
+    max-width: 70%;
+    margin: 130px auto 120px; /* Espaçamento superior ajustado para o menu */
+    padding: 20px;
+    background-color: var(--cor-principal);
+    border-radius: 8px;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1; /* O conteúdo principal cresce e empurra o rodapé para baixo */
+}
+
+/* Destaque para o título */
+h2 {
+    font-size: 2.5rem;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin: 10px 0 20px 0;
+    color: var(--cor-menu);
+}
+
+/* Formulário de adicionar matéria */
+#add-materia-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#materia-input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--cor-borda);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-bloco-materia);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 90%;
+    transition: 0.3s;
+}
+
+/* Container das matérias */
+.materias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Bloco de cada matéria com destaque */
+.materia-bloco {
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.materia-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-menu);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Anotações */
+.materia-anotacoes {
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid var(--cor-borda);
+}
+
+.materia-salvar {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--cor-bloco-materia);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.materia-salvar:hover {
+    background-color: rgb(0, 31, 85);
+}
+
+.entrar {
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+}
+
+.entrar:hover {
+    opacity: 50%;
+}
+
+.remove-materia {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.308);
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.remove-materia:hover {
+    color: #c9302c;
+}
+
+.remove-materia:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -40px;
+        background-color: var(--cor-menu);
+        height: auto;
+        width: 140%;
+        text-align: end;
+        padding-bottom: 20px;
+        box-shadow: 0 40px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    #materia-input {
+        height: 80px;
+    }
+
+    .atividades-section button {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: -30px;
+        right: 20px;
+    }
+
+    .nav-list.active {
+        display: flex;
+        transition: 1s;
+    }
+
+    .nav-itens {
+        margin-top: 20px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+
+    .atividades-section {
+        padding: 15px;
+        max-width: 90%;
+        margin-top: 100px;
+    }
+
+    #add-materia-form input,
+    #add-materia-form button {
+        font-size: 0.9rem;
+    }
+
+    .materia h3 {
+        font-size: 1.3rem;
+    }
+
+    .remove-materia{
+        top: -10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        margin: auto;
+        display: flex;
+    }
+
+    .logo {
+        font-size: 4vb;
+        margin: auto;
+    }
+
+    .nav-itens {
+        margin: 15px 20px;
+    }
+
+    li {
+        margin-left: auto;
+    }
+    
+    button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1441px) {
+    button {
+        font-size: 1.3rem;
+        padding: 15px 35px;
+    }
+    
+    .nav-list {
+        margin: auto 0 auto auto;
+    }
+}

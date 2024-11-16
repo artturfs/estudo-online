@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Apoio</title>
+    <link rel="stylesheet" href="material.css">
+</head>
+<body>
+    <header>
+        <li class="logo">Estudo <span>On</span>-line</li>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="agenda.html">AGENDA</a></li>
+            <li class="nav-itens"><a href="atividades.html">ATIVIDADES</a></li>
+            <li class="nav-itens"><a href="material.html">MATERIAL</a></li>
+            <li class="nav-itens"><a href="cadastro.html" class="entrar">Registre-se</a></li>
+        </ul>
+    </header>
+
+    <section class="materias-section">
+        <div class="materias-container">
+            <h2>Materiais de Apoio</h2>
+    
+            <!-- Formulário para adicionar matéria -->
+            <form id="add-materia-form">
+                <input type="text" id="materia-input" placeholder="Nome da matéria" required />
+                <button type="submit">Adicionar Matéria</button>
+            </form>
+    
+            <!-- Lista de matérias -->
+            <div id="materias-list"></div>
+    
+            <!-- Botão para salvar alterações -->
+            <button id="salvar-btn">Salvar Alterações</button>
+        </div>
+    </section>
+
+    <script src="material.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

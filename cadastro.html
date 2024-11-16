@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo On-line - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+      <li class="logo">Estudo <span>On</span>-line</li>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="contato.html">CONTATOS</a></li>
+        </ul>
+    </header>
+
+    <div class="form-container">
+        <p class="title">Cadastre-se</p>
+        <form id="signup-form" class="form">
+            <input type="email" id="signup-email" class="input" placeholder="Email" required>
+            <input type="password" id="signup-password" class="input" placeholder="Password" required>
+            <button type="submit" class="form-btn">Sign up</button>
+        </form>
+        <p class="sign-up-label">
+            Already have an account? <a href="singup.html" class="sign-up-link">Log in</a>
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() { 
+          const menuToggle = document.querySelector(".menu-toggle");
+          const navList = document.querySelector(".nav-list");
+  
+          menuToggle.addEventListener("click", function() {
+              navList.classList.toggle("active");
+          });
+      });
+  </script>
+</body>
+</html>

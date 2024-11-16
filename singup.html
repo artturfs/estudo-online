@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo On-line - Login</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <li class="logo">Estudo <span>On</span>-line</li>
+        <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="contato.html">CONTATOS</a></li>
+        </ul>
+    </header>
+
+    <div class="form-container">
+        <p class="title">Logue-se</p>
+        <form id="login-form" class="form">
+            <input type="email" id="login-email" class="input" placeholder="Email" required>
+            <input type="password" id="login-password" class="input" placeholder="Password" required>
+            <button type="submit" class="form-btn">Log in</button>
+        </form>
+        <p class="sign-up-label">
+            Don't have an account? <a href="cadastro.html" class="sign-up-link">Sign up</a>
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { 
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navList = document.querySelector(".nav-list");
+    
+            menuToggle.addEventListener("click", function() {
+                navList.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

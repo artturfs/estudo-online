@@ -1,0 +1,352 @@
+/* Reset de estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    position: absolute;
+    top: 160px;
+    left: 1100px;
+    width: 490px;
+}
+
+span {
+    color: var(--cor-texto);
+}
+
+/* Menu fixo */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    color: var(--cor-principal);
+}
+
+header {
+    top: 0;
+    padding: 10px;
+    background-color: var(--cor-menu);
+    font-weight: 100;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    word-spacing: -5px;
+    z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+}
+
+.nav-list {
+    margin-left: 40%;
+}
+
+.logo {
+    display: inline;
+    margin-left: 80px;
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--cor-principal);
+}
+
+.nav-itens {
+    display: inline;
+    margin-right: 80px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+a {
+    color: var(--cor-principal);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.entrar{
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+}
+
+.entrar:hover{
+    opacity: 50%;
+}
+
+
+/* Cores e variáveis de estilo */
+:root {
+    --cor-menu: rgb(0, 54, 146);
+    --cor-principal: rgb(238, 238, 238);
+    --cor-texto: rgba(255, 255, 255, 0.453);
+    --cor-bloco-materia: rgb(0, 54, 146);
+    --cor-fundo: #0000001f;
+    --cor-borda: rgb(0, 54, 146);
+}
+
+/* Corpo do site */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.materias-section {
+    max-width: 70%;
+    margin: 130px auto 120px; /* Espaçamento superior ajustado para o menu */
+    padding: 20px;
+    background-color: var(--cor-principal);
+    border-radius: 8px;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1; /* O conteúdo principal cresce e empurra o rodapé para baixo */
+}
+
+.materias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#salvar-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--cor-bloco-materia);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-materia-btn {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin: 10px 0 20px 0;
+    color: var(--cor-menu);
+}
+
+#add-materia-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#materia-input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #003692;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #003692;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 70%;
+}
+
+.materia-bloco {
+    background-color: #f7f7f7;
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.materia-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003692;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.arquivo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.arquivo-nome {
+    flex: 1;
+    color: #003692;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arquivo-nome:hover {
+    color: #0056b3;
+}
+
+.remove-arquivo-btn {
+    background-color: transparent;
+    border: none;
+    color: grey;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-arquivo-btn:hover, .remove-materia-btn:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -40px;
+        background-color: var(--cor-menu);
+        height: auto;
+        width: 140%;
+        text-align: end;
+        padding-bottom: 20px;
+        box-shadow: 0 40px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: -30px;
+        right: 20px;
+    }
+
+    .nav-list.active {
+        display: flex;
+        transition: 1s;
+    }
+
+    .nav-itens {
+        margin-top: 20px;
+    }
+
+    .materias-section {
+        max-width: 90%;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        margin: auto;
+        display: flex;
+    }
+
+    .logo {
+        font-size: 4vb;
+        margin: auto;
+    }
+
+    header {
+        top: 0;
+    }
+
+    .nav-itens {
+        margin: 15px 20px;
+    }
+
+    li {
+        margin-left: auto;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        margin: auto 0 auto auto;
+    }
+
+    /* Nova Adição para melhorar a responsividade */
+    header {
+        padding: 20px;
+    }
+
+    .materias-section {
+        max-width: 80%;
+    }
+
+    .materias-container {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .materia-bloco {
+        max-width: 45%;
+        margin: 10px;
+    }
+
+    .nav-itens {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 25px;
+    }
+}

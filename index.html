@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo On-line</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="estudo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <li class="logo">Estudo <span>On</span>-line</li>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="nav-list">
+            <li class="nav-itens"><a href="index.html">HOME</a></li>
+            <li class="nav-itens"><a href="agenda.html">AGENDA</a></li>
+            <li class="nav-itens"><a href="atividades.html">ATIVIDADES</a></li>
+            <li class="nav-itens"><a href="material.html">MATERIAL</a></li>
+            <li class="nav-itens"><a href="cadastro.html" class="entrar">Registre-se</a></li>
+        </ul>
+    </header>
+
+    <section class="slide-inicio">
+        <main class="inicio1">
+            <aside class="box-inicio">
+                <h1 class="h1-inicio">Conheça-nos</h1>
+                <p class="p-inicio">Bem-vindo ao <span>Estudo On-line</span>, a plataforma perfeita para a organização escolar. Aqui, você encontra todas as ferramentas necessárias para otimizar sua rotina acadêmica de maneira simples e eficaz. Com nosso sistema, você tem acesso a um calendário interativo que exibe todas as atividades, provas e compromissos importantes de cada dia. Além disso, é possível visualizar o cronograma mensal para um planejamento completo das suas tarefas. A agenda pessoal garante que você não perca nenhum prazo, com lembretes de tarefas de casa e outros compromissos. Mais do que uma ferramenta, o <span>Estudo On-line</span> é o seu aliado na busca por uma organização impecável e um melhor desempenho acadêmico. Organize-se com facilidade e foco! <br> Gostou? Cadastre-se!</p>
+                <a href="cadastro.html"><button>Registre-se</button></a>
+            </aside>
+        </main>
+
+
+        <main class="inicio2"> <center>
+            <aside class="box">
+                <h1 class="h1-box">Agenda</h1>
+                <p>Nosso site disponibilizará uma agenda, ajudando a organizar o tempo, registrando compromissos, tarefas e eventos. Ela facilita o planejamento diário e a gestão de prazos, contribuindo para maior produtividade e equilíbrio nas responsabilidades pessoais e profissionais.</p>
+            </aside>
+            <aside class="box">
+                <h1 class="h1-box">Material</h1>
+                <p>A página permite adicionar matérias e arquivos, mantendo-os salvos localmente no navegador. É possível organizar, editar e remover facilmente os itens cadastrados conforme necessário. A interface é simples, prática e responsiva, garantindo uma boa experiência para o usuário em qualquer dispositivo.</p>
+            </aside>
+            <aside class="box">
+                <h1 class="h1-box">Atividades</h1>
+                <p>Atividades são tarefas do dia a dia com objetivos específicos. Organizar essas tarefas, usando ferramentas como agendas ou aplicativos, ajuda a manter o foco, a produtividade e a evitar sobrecarga. Nosso site tem como objetivo dar essas ferramentas para facilitar seus estudos. </p>
+            </aside>
+        </main></center>
+    </section>
+
+    <section class="slide-comeco">
+        <main class="comeco">
+        </main>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { 
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navList = document.querySelector(".nav-list");
+    
+            menuToggle.addEventListener("click", function() {
+                navList.classList.toggle("active");
+            });
+        });
+    </script>
+
+<footer>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Estudo On-line. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
